@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mai - Life Coach</title>
+    <link rel="stylesheet" href="mai.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Zain:wght@200;300;400;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Arabic Content (Default) -->
+    <div id="ar-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <i class="fas fa-star"></i>
+                        <span>مي ابو العنين</span>
+                    </div>
+                    <nav class="nav">
+                        <a href="#about">نبذة عني</a>
+                        <a href="#services">الخدمات</a>
+                        <a href="#contact">تواصل معي</a>
+                    </nav>
+                    <div class="header-icons">
+                        <div class="lang-toggle-nav">
+                            <button onclick="switchLang('en')" id="enBtn" class="">English</button>
+                            <button onclick="switchLang('ar')" id="arBtn" class="active">العربية</button>
+                        </div>
+                        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mobile-menu" id="mobileMenu">
+                    <a href="#about">نبذة عني</a>
+                    <a href="#services">الخدمات</a>
+                    <a href="#contact">تواصل معي</a>
+                    <div class="mobile-lang-toggle">
+                        <button onclick="switchLang('en')" id="enBtnMobile" class="">English</button>
+                        <button onclick="switchLang('ar')" id="arBtnMobile" class="active">العربية</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <div class="hero-decoration">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h1>شخصيتك هي ما يصنع طابعك المميز</h1>
+                        <p>مرحباً! أنا مي, مدربة حياة معتمدة متخصصة في مساعدتك على اكتشاف إمكانياتك الكاملة وخلق الحياة التي طالما حلمت بها. مع سنوات من الخبرة في التنمية الشخصية والتدريب على العافية، أتخصص في توجيه الأفراد خلال رحلات تحولية.</p>
+                        <!-- <div class="hero-buttons">
+                            <button class="btn btn-primary">اقرأ المزيد</button>
+                            <button class="btn btn-play">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div> -->
+                    </div>
+                    <div class="hero-image">
+                        <div class="image-container">
+                            <div class="image-placeholder">
+                                <img src="1.jpeg" alt="ماي - مدربة حياة">
+                            </div>
+                            <div class="decorative-elements">
+                                <div class="leaf-decoration">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                                <div class="color-palette">
+                                    <div class="color-dot color-1"></div>
+                                    <div class="color-dot color-2"></div>
+                                    <div class="color-dot color-3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personal About Section -->
+        <section class="welcome" id="about">
+            <div class="container">
+                <div class="welcome-content">
+                    <div class="welcome-image">
+                        <div class="image-container">
+                            <div class="image-placeholder">
+                                <img src="2.jpeg" alt="نبذة عن ماي">
+                            </div>
+                            <div class="decorative-elements">
+                                <div class="leaf-decoration">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                                <div class="pattern-dots">
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="welcome-text">
+                        <h2>أهلاً وسهلاً بيكي</h2>
+                        <p>طالما وصلتي لحد هنا، فده معناه إن عندك نية حقيقية تعيشي حياة طيبة مليانة سكينة ومسؤولية.
+وأنا هنا علشان أكون معاكي في الرحلة دي بكل حب ووعي.</p>
+                        
+                        <p>أنا مى أبو العينين، كوتش ومستشارة أمومة وتطوير ذات ووعي إنساني.
+رسالتي في الحياة هي إني أساعدك توصلي لحياة فيها سكينة وثبات وطمأنينة داخلية.</p>
+
+                        <p>رحلتي مع التنمية الذاتية بدأت من سنين طويلة، وبدأت بنفسي أولاً.
+اتعلمت كتير ولسه بتعلّم كل يوم عن النفس الإنسانية وعن الطرق اللي بتخلينا نعيش بانسجام مع نفسنا، ومع الناس اللي حوالينا، ومع الخالق سبحانه وتعالى.
+بتعلّم إزاي نحافظ على وجود السكينة الداخلية رغم تقلبات الحياة السريعة.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Academic Background Section -->
+        <section class="academic-section">
+            <div class="container">
+                <div class="academic-content">
+                    <div class="academic-text">
+                        <h2>الجانب الأكاديمي والمهني</h2>
+                        <p>خلال رحلتي، حصلت على العديد من الشهادات في التدريب والتطوير الشخصي باعتماد Neuro-Semantics،
+وكمان شهادة تدريب المدربين (TOT).</p>
+                        
+                        <p>أنا خريجة كلية إدارة الأعمال – جامعة عين شمس،
+ودرست لمدة أربع سنوات في كلية الآداب – جامعة القاهرة، قسم علم النفس.</p>
+
+                        <p>بالإضافة إلى ذلك، حصلت على الشهادات التالية من Neuro-Semantics:</p>
+                    </div>
+                    
+                    <div class="academic-bottom">
+                        <div class="certifications-column">
+                            <ul class="certification-list">
+                                <li>Resilience Certified</li>
+                                <li>APG Certified</li>
+                                <li>NLP Practitioner Certified</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="academic-stats">
+                            <div class="stats">
+                                <div class="stat-item">
+                                    <div class="stat-number">32</div>
+                                    <div class="stat-label">خبرة</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">82</div>
+                                    <div class="stat-label">تم تدريبهم</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">28</div>
+                                    <div class="stat-label">شهادات</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <div class="container">
+                <h2>الدورات</h2>
+                <div class="services-grid" id="servicesGrid">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>حياة طيبه</h3>
+                        <p>للوصول لحياة طيبه أكثر سكينه و نضج و مرونه نفسيه.</p>
+                        <a href="#" class="service-link">اقرأ المزيد ←</a>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>لتسكنوا</h3>
+                        <p>لحياة زوجية أعلى جوده.</p>
+                        <a href="#" class="service-link">اقرأ المزيد ←</a>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>من ترضون</h3>
+                        <p>مهارات إختيار شريك الحياة</p>
+                        <a href="#" class="service-link">اقرأ المزيد ←</a>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="service-icon">
+                            <i class="fas fa-baby"></i>
+                        </div>
+                        <h3>Mommy inside out</h3>
+                        <p>أول كورس عن الأمومة للوصول لمتعة الأمومة.</p>
+                        <a href="#" class="service-link">اقرأ المزيد ←</a>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="service-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3>Communication skills</h3>
+                        <p>من أجل تواصل أعلى جوده.</p>
+                        <a href="#" class="service-link">اقرأ المزيد ←</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section
+        <section class="gallery-section" id="gallery">
+            <div class="container">
+                <h2>معرض الصور</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <div class="framed-image">
+                            <div class="gallery-placeholder">صورة ورشة العمل</div>
+                            <div class="frame frame-2"></div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="framed-image">
+                            <div class="gallery-placeholder">جلسة تدريب</div>
+                            <div class="frame frame-3"></div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="framed-image">
+                            <div class="gallery-placeholder">شهادة</div>
+                            <div class="frame frame-4"></div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="framed-image">
+                            <div class="gallery-placeholder">صورة الحدث</div>
+                            <div class="frame frame-5"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <h2>تواصل معي</h2>
+                <div class="contact-content">
+                    <div class="contact-image">
+                        <div class="image-container">
+                            <img src="contact.jpeg" alt="تواصل معي">
+                            <div class="decorative-elements">
+                                <div class="leaf-decoration">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-wrapper">
+                        <form class="contact-form" onsubmit="handleSubmit(event)">
+                            <div class="form-group">
+                                <label for="name-ar">الاسم</label>
+                                <input type="text" id="name-ar" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email-ar">البريد الإلكتروني</label>
+                                <input type="email" id="email-ar" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message-ar">الرسالة</label>
+                                <textarea id="message-ar" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">إرسال الرسالة</button>
+                        </form>
+                        
+                        <div class="social-links">
+                            <h3>تابعيني على</h3>
+                            <div class="social-icons">
+                                <a href="https://wa.me/201234567890" target="_blank" class="social-link whatsapp" title="واتساب">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                                <a href="https://instagram.com/mai_abueleinin" target="_blank" class="social-link instagram" title="إنستغرام">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://facebook.com/mai.abueleinin" target="_blank" class="social-link facebook" title="فيسبوك">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="https://youtube.com/@maiabueleinin" target="_blank" class="social-link youtube" title="يوتيوب">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2025 Anas</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- English Content -->
+    <div id="en-content" class="hidden">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <i class="fas fa-star"></i>
+                        <span>Mai</span>
+                    </div>
+                    <nav class="nav">
+                        <a href="#about">About</a>
+                        <a href="#services">Services</a>
+                        <a href="#contact">Contact</a>
+                    </nav>
+                    <div class="header-icons">
+                        <div class="lang-toggle-nav">
+                            <button onclick="switchLang('en')" id="enBtn2" class="active">English</button>
+                            <button onclick="switchLang('ar')" id="arBtn2" class="">العربية</button>
+                        </div>
+                        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mobile-menu" id="mobileMenuEn">
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#contact">Contact</a>
+                    <div class="mobile-lang-toggle">
+                        <button onclick="switchLang('en')" id="enBtnMobileEn" class="active">English</button>
+                        <button onclick="switchLang('ar')" id="arBtnMobileEn" class="">العربية</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <div class="hero-decoration">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h1>Your Personality is What Makes You Character</h1>
+                        <p>Welcome! I'm Mai, a certified life coach dedicated to helping you unlock your full potential and create the life you've always dreamed of. With years of experience in personal development and wellness coaching, I specialize in guiding individuals through transformative journeys.</p>
+                        <!-- <div class="hero-buttons">
+                            <button class="btn btn-primary">Learn More</button>
+                            <button class="btn btn-play">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div> -->
+                    </div>
+                    <div class="hero-image">
+                        <div class="image-container">
+                            <div class="image-placeholder">
+                                <img src="1.jpeg" alt="Mai - Life Coach">
+                            </div>
+                            <div class="decorative-elements">
+                                <div class="leaf-decoration">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                                <div class="color-palette">
+                                    <div class="color-dot color-1"></div>
+                                    <div class="color-dot color-2"></div>
+                                    <div class="color-dot color-3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personal About Section -->
+        <section class="welcome" id="about">
+            <div class="container">
+                <div class="welcome-content">
+                    <div class="welcome-image">
+                        <div class="image-container">
+                            <div class="image-placeholder">
+                                <img src="2.jpeg" alt="About Mai">
+                            </div>
+                            <div class="decorative-elements">
+                                <div class="leaf-decoration">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                                <div class="pattern-dots">
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="welcome-text">
+                        <h2>Welcome</h2>
+                        <p>If you've reached this point, it means you truly have the intention to live a peaceful and responsible life — and I'm here to support you on that journey with love and awareness.</p>
+                        
+                        <p>I'm Mai Aboul Enein, a Coach and Consultant in Motherhood, Self-Development, and Human Awareness.
+My life mission is to help you reach a place of inner peace, balance, and stability.</p>
+
+                        <p>My journey with self-development started many years ago — it began with myself.
+I've learned so much, and I'm still learning every day about the human soul and the ways we can live in harmony with ourselves, with others, and with our Creator.
+My focus is on discovering how to maintain inner serenity despite life's constant changes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Academic Background Section -->
+        <section class="academic-section">
+            <div class="container">
+                <div class="academic-content">
+                    <div class="academic-text">
+                        <h2>Professional Background</h2>
+                        <p>Throughout my journey, I've earned several certifications in training and personal development, accredited by Neuro-Semantics,
+as well as a Train of Trainers (TOT) certification.</p>
+                        
+                        <p>I graduated from Ain Shams University with a Bachelor's in Business Administration,
+and later studied for four years at Cairo University, Faculty of Arts – Psychology Department.</p>
+
+                        <p>Additionally, I hold the following Neuro-Semantics certifications:</p>
+                    </div>
+                    
+                    <div class="academic-bottom">
+                        <div class="certifications-column">
+                            <ul class="certification-list">
+                                <li>Resilience Certified</li>
+                                <li>APG Certified</li>
+                                <li>NLP Practitioner Certified</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="academic-stats">
+                            <div class="stats">
+                                <div class="stat-item">
+                                    <div class="stat-number">32</div>
+                                    <div class="stat-label">Experience</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">82</div>
+                                    <div class="stat-label">Mentored</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">28</div>
+                                    <div class="stat-label">Certificates</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <div class="container">
+                <h2>Courses</h2>
+                <div class="services-grid" id="servicesGridEn">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Hayah Tayyibah </br> A Good Life</h3>
+                        <p>To achieve a life filled with peace, maturity, and emotional resilience.</p>
+                        <a href="#" class="service-link">Learn More →</a>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Litas'kunu </br>So That You May Find Tranquility</h3>
+                        <p>For a higher-quality and more harmonious marital life.</p>
+                        <a href="#" class="service-link">Learn More →</a>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Man Tardawn </br>The One You Approve</h3>
+                        <p>Skills for choosing the right life partner.</p>
+                        <a href="#" class="service-link">Learn More →</a>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="service-icon">
+                            <i class="fas fa-baby"></i>
+                        </div>
+                        <h3>Mommy Inside Out</h3>
+                        <p>The first course on motherhood — helping you discover the joy and fulfillment of being a mother.</p>
+                        <a href="#" class="service-link">Learn More →</a>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="service-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3>Communication Skills</h3>
+                        <p>For deeper, more meaningful, and higher-quality communication.</p>
+                        <a href="#" class="service-link">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section
+        <section class="gallery-section" id="gallery">
+            <div class="container">
+                <h2>Gallery</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <div class="framed-image">
+                            <div class="gallery-placeholder">Workshop Image</div>
+                            <div class="frame frame-2"></div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="framed-image">
+                            <div class="gallery-placeholder">Coaching Session</div>
+                            <div class="frame frame-3"></div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="framed-image">
+                            <div class="gallery-placeholder">Testimonial</div>
+                            <div class="frame frame-4"></div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="framed-image">
+                            <div class="gallery-placeholder">Event Photo</div>
+                            <div class="frame frame-5"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-image">
+                        <div class="image-container">
+                            <img src="contact.jpeg" alt="Get In Touch">
+                            <div class="decorative-elements">
+                                <div class="leaf-decoration">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-wrapper">
+                        <form class="contact-form" onsubmit="handleSubmit(event)">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                        
+                        <div class="social-links">
+                            <h3>Follow Me</h3>
+                            <div class="social-icons">
+                                <a href="https://wa.me/201234567890" target="_blank" class="social-link whatsapp" title="WhatsApp">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                                <a href="https://instagram.com/mai_abueleinin" target="_blank" class="social-link instagram" title="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://facebook.com/mai.abueleinin" target="_blank" class="social-link facebook" title="Facebook">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="https://youtube.com/@maiabueleinin" target="_blank" class="social-link youtube" title="YouTube">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2025 Anas</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="mai.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html>
