@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mai - Life Coach</title>
+    <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="mai.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Zain:wght@200;300;400;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -17,12 +18,12 @@
             <div class="container">
                 <div class="nav-wrapper">
                     <div class="logo">
-                        <i class="fas fa-star"></i>
-                        <span>مي ابو العنين</span>
+                        <img src="logo.png" alt="Mai Abu Al-Enein Logo" class="logo-img">
                     </div>
                     <nav class="nav">
                         <a href="#about">نبذة عني</a>
                         <a href="#services">الخدمات</a>
+                        <a href="#certifications">الشهادات</a>
                         <a href="#contact">تواصل معي</a>
                     </nav>
                     <div class="header-icons">
@@ -38,6 +39,7 @@
                 <div class="mobile-menu" id="mobileMenu">
                     <a href="#about">نبذة عني</a>
                     <a href="#services">الخدمات</a>
+                    <a href="#certifications">الشهادات</a>
                     <a href="#contact">تواصل معي</a>
                     <div class="mobile-lang-toggle">
                         <button onclick="switchLang('en')" id="enBtnMobile" class="">English</button>
@@ -131,8 +133,7 @@
                         <p>خلال رحلتي، حصلت على العديد من الشهادات في التدريب والتطوير الشخصي باعتماد Neuro-Semantics،
 وكمان شهادة تدريب المدربين (TOT).</p>
                         
-                        <p>أنا خريجة كلية إدارة الأعمال – جامعة عين شمس،
-ودرست لمدة أربع سنوات في كلية الآداب – جامعة القاهرة، قسم علم النفس.</p>
+                        <p>حاصلة على بكالريوس إدارة اعمال جامعة عين شمس  و حاصلة على ليسانس اداب قسم علم نفس جامعة القاهرة</p>
 
                         <p>بالإضافة إلى ذلك، حصلت على الشهادات التالية من Neuro-Semantics:</p>
                     </div>
@@ -163,6 +164,46 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="certifications-section" id="certifications">
+            <div class="container">
+                <h2>شهاداتي المهنية</h2>
+                <p>مجموعة من الشهادات المعتمدة في التدريب والتنمية الشخصية</p>
+                <div class="certifications-slider">
+                    <div class="slider-wrapper">
+                        <div class="cert-slide active" onclick="openModal('certs/1.jpeg')">
+                            <img src="certs/1.jpeg" alt="شهادة 1">
+                        </div>
+                        <div class="cert-slide" onclick="openModal('certs/2.jpeg')">
+                            <img src="certs/2.jpeg" alt="شهادة 2">
+                        </div>
+                        <div class="cert-slide" onclick="openModal('certs/3.jpeg')">
+                            <img src="certs/3.jpeg" alt="شهادة 3">
+                        </div>
+                        <div class="cert-slide" onclick="openModal('certs/4.jpeg')">
+                            <img src="certs/4.jpeg" alt="شهادة 4">
+                        </div>
+                        <div class="cert-slide" onclick="openModal('certs/5.jpeg')">
+                            <img src="certs/5.jpeg" alt="شهادة 5">
+                        </div>
+                    </div>
+                    <button class="slider-btn prev-btn" onclick="prevSlide()">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <button class="slider-btn next-btn" onclick="nextSlide()">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                </div>
+                <div class="slider-dots">
+                    <span class="dot active" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
                 </div>
             </div>
         </section>
@@ -318,12 +359,12 @@
             <div class="container">
                 <div class="nav-wrapper">
                     <div class="logo">
-                        <i class="fas fa-star"></i>
-                        <span>Mai</span>
+                        <img src="logo.png" alt="Mai Abu Al-Enein Logo" class="logo-img">
                     </div>
                     <nav class="nav">
                         <a href="#about">About</a>
                         <a href="#services">Services</a>
+                        <a href="#certifications">Certifications</a>
                         <a href="#contact">Contact</a>
                     </nav>
                     <div class="header-icons">
@@ -339,6 +380,7 @@
                 <div class="mobile-menu" id="mobileMenuEn">
                     <a href="#about">About</a>
                     <a href="#services">Services</a>
+                    <a href="#certifications">Certifications</a>
                     <a href="#contact">Contact</a>
                     <div class="mobile-lang-toggle">
                         <button onclick="switchLang('en')" id="enBtnMobileEn" class="active">English</button>
@@ -356,8 +398,8 @@
                         <div class="hero-decoration">
                             <i class="fas fa-star"></i>
                         </div>
-                        <h1>Your Personality is What Makes You Character</h1>
-                        <p>Welcome! I'm Mai, a certified life coach dedicated to helping you unlock your full potential and create the life you've always dreamed of. With years of experience in personal development and wellness coaching, I specialize in guiding individuals through transformative journeys.</p>
+                        <h1>Your Personality Shapes Your Character</h1>
+                        <p>Welcome! I'm Mai, a certified life coach dedicated to helping you unlock your full potential and create the life you've always dreamed of. With years of experience in personal development and wellness coaching, I guide individuals through deep and transformative journeys.</p>
                         <!-- <div class="hero-buttons">
                             <button class="btn btn-primary">Learn More</button>
                             <button class="btn btn-play">
@@ -463,6 +505,46 @@ and later studied for four years at Cairo University, Faculty of Arts – Psycho
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section English -->
+        <section class="certifications-section" id="certifications">
+            <div class="container">
+                <h2>Professional Certifications</h2>
+                <p>A collection of certified credentials in training and personal development</p>
+                <div class="certifications-slider">
+                    <div class="slider-wrapper">
+                        <div class="cert-slide active" onclick="openModal('certs/1.jpeg')">
+                            <img src="certs/1.jpeg" alt="Certificate 1">
+                        </div>
+                        <div class="cert-slide" onclick="openModal('certs/2.jpeg')">
+                            <img src="certs/2.jpeg" alt="Certificate 2">
+                        </div>
+                        <div class="cert-slide" onclick="openModal('certs/3.jpeg')">
+                            <img src="certs/3.jpeg" alt="Certificate 3">
+                        </div>
+                        <div class="cert-slide" onclick="openModal('certs/4.jpeg')">
+                            <img src="certs/4.jpeg" alt="Certificate 4">
+                        </div>
+                        <div class="cert-slide" onclick="openModal('certs/5.jpeg')">
+                            <img src="certs/5.jpeg" alt="Certificate 5">
+                        </div>
+                    </div>
+                    <button class="slider-btn prev-btn" onclick="prevSlide()">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-btn next-btn" onclick="nextSlide()">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="slider-dots">
+                    <span class="dot active" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
                 </div>
             </div>
         </section>
@@ -609,6 +691,14 @@ and later studied for four years at Cairo University, Faculty of Arts – Psycho
                 <p>&copy; 2025 Anas</p>
             </div>
         </footer>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="Certificate">
+        </div>
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

@@ -38,6 +38,8 @@ function switchLang(lang) {
         
         // Re-initialize observers for English content
         initializeObservers();
+        // Reinitialize slider for language change
+        setTimeout(reinitializeSlider, 100);
     } else {
         arContent.classList.remove('hidden');
         enContent.classList.add('hidden');
@@ -63,6 +65,8 @@ function switchLang(lang) {
         
         // Re-initialize observers for Arabic content
         initializeObservers();
+        // Reinitialize slider for language change
+        setTimeout(reinitializeSlider, 100);
     }
     
     // Close mobile menu after language switch
@@ -354,5 +358,152 @@ document.querySelector('.search-btn')?.addEventListener('click', () => {
 document.querySelector('.whatsapp-btn')?.addEventListener('click', () => {
     window.open('https://wa.me/1234567890', '_blank');
 });
+
+// Certifications Slider Functionality
+let currentSlideIndex = 0;
+let slides = [];
+let dots = [];
+
+function initializeSlider() {
+    // Get the current active language content
+    const isArabic = !document.getElementById('ar-content').classList.contains('hidden');
+    const activeContent = isArabic ? document.getElementById('ar-content') : document.getElementById('en-content');
+    
+    // Get slides and dots only from the active language section
+    slides = activeContent.querySelectorAll('.cert-slide');
+    dots = activeContent.querySelectorAll('.dot');
+    
+    console.log(`Initialized slider for ${isArabic ? 'Arabic' : 'English'} with ${slides.length} slides`);
+}
+
+function showSlide(index) {
+    // Get the current active language content
+    const isArabic = !document.getElementById('ar-content').classList.contains('hidden');
+    const activeContent = isArabic ? document.getElementById('ar-content') : document.getElementById('en-content');
+    const sliderWrapper = activeContent.querySelector('.slider-wrapper');
+    
+    if (sliderWrapper && slides.length > 0) {
+        // Check if we're in RTL mode
+        const isRTL = document.documentElement.dir === 'rtl';
+        
+        // Update slide position - handle RTL differently
+        if (isRTL) {
+            sliderWrapper.style.transform = `translateX(${index * 100}%)`;
+        } else {
+            sliderWrapper.style.transform = `translateX(-${index * 100}%)`;
+        }
+        
+        // Update active slide
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === index);
+        });
+        
+        // Update active dot
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+        
+        currentSlideIndex = index;
+    }
+}
+
+function nextSlide() {
+    initializeSlider(); // Reinitialize to get current slides
+    const nextIndex = (currentSlideIndex + 1) % slides.length;
+    showSlide(nextIndex);
+}
+
+function prevSlide() {
+    initializeSlider(); // Reinitialize to get current slides
+    const prevIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+    showSlide(prevIndex);
+}
+
+function currentSlide(index) {
+    initializeSlider(); // Reinitialize to get current slides
+    showSlide(index - 1); // Convert to 0-based index
+}
+
+// Modal functionality
+function openModal(imageSrc) {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    
+    if (modal && modalImage) {
+        modal.style.display = 'block';
+        modalImage.src = imageSrc;
+        
+        // Prevent body scroll when modal is open
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeModal() {
+    const modal = document.getElementById('imageModal');
+    
+    if (modal) {
+        modal.style.display = 'none';
+        
+        // Restore body scroll
+        document.body.style.overflow = 'auto';
+    }
+}
+
+// Close modal when clicking outside the image
+document.getElementById('imageModal')?.addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeModal();
+    }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeModal();
+    }
+});
+
+// Auto-slide functionality (optional)
+let autoSlideInterval;
+
+function startAutoSlide() {
+    autoSlideInterval = setInterval(() => {
+        initializeSlider(); // Ensure we have current slides
+        if (slides.length > 0) {
+            nextSlide();
+        }
+    }, 5000); // Change slide every 5 seconds
+}
+
+function stopAutoSlide() {
+    clearInterval(autoSlideInterval);
+}
+
+// Start auto-slide when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    initializeSlider();
+    if (slides.length > 0) {
+        showSlide(0); // Initialize first slide
+        startAutoSlide();
+        
+        // Stop auto-slide on user interaction - for both sliders
+        const sliderContainers = document.querySelectorAll('.certifications-slider');
+        sliderContainers.forEach(container => {
+            container.addEventListener('mouseenter', stopAutoSlide);
+            container.addEventListener('mouseleave', startAutoSlide);
+        });
+    }
+});
+
+// Reinitialize slider when language changes
+function reinitializeSlider() {
+    stopAutoSlide();
+    currentSlideIndex = 0;
+    initializeSlider();
+    if (slides.length > 0) {
+        showSlide(0);
+        startAutoSlide();
+    }
+}
 
 console.log('Feminine Purple theme loaded successfully! 💜');
