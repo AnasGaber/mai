@@ -1339,10 +1339,8 @@ textarea {
 /* Contact Cards */
 .contact-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    max-width: 800px;
-    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
     padding: 0 20px;
 }
 
@@ -1529,20 +1527,25 @@ textarea {
         font-size: 1.5rem;
     }
     
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
     .contact-cards {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 25px;
         padding: 0 10px;
     }
     
     .contact-card {
-        padding: 30px 20px;
+        padding: 25px 20px;
     }
     
     .contact-card-icon {
-        width: 70px;
-        height: 70px;
-        font-size: 2rem;
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
     }
     
     .nav-wrapper {
