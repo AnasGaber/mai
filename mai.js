@@ -356,7 +356,7 @@ document.querySelector('.search-btn')?.addEventListener('click', () => {
 
 // WhatsApp button functionality
 document.querySelector('.whatsapp-btn')?.addEventListener('click', () => {
-    window.open('https://wa.me/1234567890', '_blank');
+    window.open('https://wa.me/201013616638', '_blank');
 });
 
 // Certifications Slider Functionality
