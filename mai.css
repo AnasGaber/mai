@@ -2158,8 +2158,9 @@ textarea {
     }
     
     .testimonial-card::before {
-        font-size: 3rem;
-        top: -5px;
+        font-size: 2rem;
+        top: -2px;
+        right: 15px;
     }
     
     .testimonial-content p {
@@ -2175,11 +2176,11 @@ textarea {
     }
     
     .author-info h4 {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     
     .author-info span {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
     
     .testimonials-track {
@@ -2190,28 +2191,40 @@ textarea {
 
 @media (max-width: 480px) {
     .testimonials-slider {
-        height: 500px;
+        height: 420px;
         border-radius: 15px;
     }
     
     .testimonial-card {
-        flex: 0 0 280px;
-        padding: 20px 15px;
-        height: 450px;
+        flex: 0 0 300px;
+        padding: 15px 15px;
+        height: 400px;
         border-radius: 15px;
+        max-width: 90vw;
+        box-sizing: border-box;
     }
     
     .testimonial-content p {
-        font-size: 0.85rem;
-        line-height: 1.6;
-        padding-right: 10px;
+        font-size: 0.75rem;
+        line-height: 1.4;
+        padding-right: 5px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        max-width: 100%;
+        overflow: hidden;
     }
     
     [dir="ltr"] .testimonial-content p {
-        padding-left: 10px;
+        padding-left: 5px;
         padding-right: 0;
-        font-size: 0.85rem;
-        line-height: 1.6;
+        font-size: 0.75rem;
+        line-height: 1.4;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        max-width: 100%;
+        overflow: hidden;
     }
     
     .testimonials-track {
