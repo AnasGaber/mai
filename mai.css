@@ -320,7 +320,6 @@ body.rtl {
     background: linear-gradient(135deg, var(--background-purple) 0%, #fef7ff 100%);
     position: relative;
     overflow: hidden;
-    border-radius: 0 0 30px 30px;
 }
 
 .hero-content {
@@ -477,8 +476,6 @@ body.rtl {
 .welcome {
     padding: 80px 0;
     background: white;
-    border-radius: 30px 30px 30px 30px;
-    margin: 30px 15px;
 }
 
 .welcome-content {
@@ -537,8 +534,6 @@ body.rtl {
 .academic-section {
     padding: 80px 0;
     background: var(--background-purple);
-    border-radius: 30px 30px 30px 30px;
-    margin: 30px 15px;
 }
 
 .academic-content {
@@ -1143,8 +1138,6 @@ body.rtl {
 .contact-section {
     padding: 80px 0;
     background: var(--background-purple);
-    border-radius: 30px 30px 0 0;
-    margin: 30px 15px 0 15px;
 }
 
 .contact-section h2 {
@@ -1475,18 +1468,7 @@ textarea {
         display: none;
     }
     
-    .hero {
-        border-radius: 0 0 20px 20px;
-    }
-    
-    .welcome, .academic-section, .services {
-        border-radius: 20px;
-        margin: 20px 10px;
-    }
-    
     .contact-section {
-        border-radius: 20px 20px 0 0;
-        margin: 20px 10px 0 10px;
         padding: 60px 0;
     }
     
@@ -1929,7 +1911,7 @@ textarea {
 /* Testimonials Section */
 .testimonials-section {
     padding: 100px 0;
-    background: linear-gradient(135deg, var(--background-purple) 0%, #f8f6fa 100%);
+    background: #ffffff;
     overflow: hidden;
     position: relative;
 }
@@ -2209,4 +2191,195 @@ textarea {
     .testimonials-track {
         animation: scroll 120s linear infinite;
     }
+}
+
+/* Wavy Section Dividers */
+.wave-divider {
+    position: relative;
+    height: 150px;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    margin: 0;
+    padding: 0;
+}
+
+.wave-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+    transform: rotateY(180deg);
+}
+
+/* White to Pink Wave */
+.wave-white-to-pink {
+    background: var(--background-purple);
+}
+
+.wave-white-to-pink svg {
+    fill: #ffffff;
+}
+
+/* White to Pink Wave */
+.wave-services-to-light-pink {
+    background: var(--background-purple);
+}
+
+.wave-services-to-light-pink svg {
+    fill: #ffffff;
+}
+
+/* Pink to White Wave */
+.wave-pink-to-white {
+    background: #ffffff;
+}
+
+.wave-pink-to-white svg {
+    fill: var(--background-purple);
+}
+
+/* Alternative gradient waves */
+.wave-light-pink-to-white {
+    background: #ffffff;
+}
+
+.wave-light-pink-to-white svg {
+    fill: var(--background-purple);
+}
+
+/* Alternative gradient waves */
+.wave-contact-light-pink-to-white {
+    background: var(--background-purple);
+}
+
+.wave-contact-light-pink-to-white svg {
+    fill: #ffffff;
+}
+
+.wave-white-to-light-pink {
+    background: var(--background-purple);
+}
+
+.wave-white-to-light-pink svg {
+    fill: #ffffff;
+}
+
+/* Services section specific waves */
+.wave-light-pink-to-services {
+    background: #f8f9ff;
+}
+
+.wave-light-pink-to-services svg {
+    fill: var(--background-purple);
+}
+
+.wave-services-to-white {
+    background: #ffffff;
+}
+
+.wave-services-to-white svg {
+    fill: #f8f9ff;
+}
+
+.wave-white-to-services {
+    background: #f8f9ff;
+}
+
+.wave-white-to-services svg {
+    fill: #ffffff;
+}
+
+.wave-services-to-testimonials {
+    background: #ffffff;
+}
+
+.wave-services-to-testimonials svg {
+    fill: #f8f9ff;
+}
+
+.wave-testimonials-to-contact {
+    background: #ffffff;
+}
+
+.wave-testimonials-to-contact svg {
+    fill: var(--background-purple);
+}
+
+.wave-testimonials-to-certifications {
+    background: #ffffff;
+}
+
+.wave-testimonials-to-certifications svg {
+    fill: #ffffff;
+}
+
+.wave-certifications-to-testimonials {
+    background: #ffffff;
+}
+
+.wave-certifications-to-testimonials svg {
+    fill: #ffffff;
+}
+
+/* Responsive Design for Waves */
+@media (max-width: 768px) {
+    .wave-divider {
+        height: 100px;
+    }
+    
+    .wave-divider svg {
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .wave-divider {
+        height: 80px;
+    }
+    
+    .wave-divider svg {
+        height: 80px;
+    }
+}
+
+/* Remove existing border-radius and margins from sections */
+.hero {
+    border-radius: 0 !important;
+    margin: 0 !important;
+}
+
+.welcome {
+    border-radius: 0 !important;
+    margin: 0 !important;
+}
+
+.academic-section {
+    border-radius: 0 !important;
+    margin: 0 !important;
+}
+
+.services {
+    border-radius: 0 !important;
+    margin: 0 !important;
+}
+
+.certifications-section {
+    border-radius: 0 !important;
+    margin: 0 !important;
+}
+
+.testimonials-section {
+    border-radius: 0 !important;
+    margin: 0 !important;
+}
+
+.contact-section {
+    border-radius: 0 !important;
+    margin: 0 !important;
+}
+
+.gallery-section {
+    border-radius: 0 !important;
+    margin: 0 !important;
 }
