@@ -1980,7 +1980,7 @@ textarea {
     font-size: 1.2rem;
     color: var(--text-light);
     margin-bottom: 60px;
-    max-width: 600px;
+    max-width: 650px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -1989,7 +1989,7 @@ textarea {
     position: relative;
     padding-top: 20px;
     width: 100vw;
-    height: 400px;
+    height: 600px;
     overflow: hidden;
     margin-left: calc(-50vw + 50%);
 }
@@ -1998,15 +1998,15 @@ textarea {
     display: flex;
     gap: 30px;
     width: max-content;
-    animation: scroll 60s linear infinite;
+    animation: scroll 90s linear infinite;
 }
 
 @keyframes scroll {
     0% {
-        transform: translateX(100vw);
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
 }
 
@@ -2024,7 +2024,7 @@ textarea {
     border: 2px solid var(--light-purple);
     position: relative;
     transition: all 0.3s ease;
-    height: 340px;
+    height: 550px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -2054,7 +2054,7 @@ textarea {
 }
 
 .testimonial-content p {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     line-height: 1.8;
     color: var(--text-dark);
     text-align: right;
