@@ -2163,7 +2163,7 @@ textarea {
     }
     
     .testimonial-content p {
-        font-size: 1rem;
+        font-size: 0.9rem;
         line-height: 1.6;
         padding-right: 15px;
     }
@@ -2171,6 +2171,7 @@ textarea {
     [dir="ltr"] .testimonial-content p {
         padding-left: 15px;
         padding-right: 0;
+        font-size: 0.9rem;
     }
     
     .author-info h4 {
@@ -2201,13 +2202,16 @@ textarea {
     }
     
     .testimonial-content p {
-        font-size: 0.95rem;
+        font-size: 0.85rem;
+        line-height: 1.6;
         padding-right: 10px;
     }
     
     [dir="ltr"] .testimonial-content p {
         padding-left: 10px;
         padding-right: 0;
+        font-size: 0.85rem;
+        line-height: 1.6;
     }
     
     .testimonials-track {
@@ -2234,52 +2238,17 @@ textarea {
     transform: rotateY(180deg);
     /* Add shadow effects only to SVG waves */
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
-    /* Add wave movement animation */
-    animation: waveFloat 6s ease-in-out infinite;
-    transition: all 0.3s ease;
 }
 
-/* Wave Animation Keyframes for SVG elements */
-@keyframes waveFloat {
-    0%, 100% {
-        transform: rotateY(180deg) translateY(0px);
-    }
-    50% {
-        transform: rotateY(180deg) translateY(-2px);
-    }
-}
 
-@keyframes waveMovement {
-    0%, 100% {
-        transform: rotateY(180deg) translateX(0px) scale(1);
-    }
-    25% {
-        transform: rotateY(180deg) translateX(1px) scale(1.005);
-    }
-    75% {
-        transform: rotateY(180deg) translateX(-1px) scale(1.005);
-    }
-}
+
+
 
 /* Removed wave ripple effect */
 
-/* Scroll-triggered wave animations for SVG */
-.wave-divider svg.animate-on-scroll {
-    animation: waveSlideIn 1.2s ease-out, waveFloat 6s ease-in-out infinite 1.2s;
-}
 
-@keyframes waveSlideIn {
-    0% {
-        opacity: 0;
-        transform: rotateY(180deg) translateY(30px) scale(0.98);
-        filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
-    }
-    100% {
-        opacity: 1;
-        transform: rotateY(180deg) translateY(0px) scale(1);
-        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
-    }
-}
+
+
 
 /* Removed hover effects for waves */
 
@@ -2287,23 +2256,11 @@ textarea {
 .hero, .welcome, .academic-section, .certifications-section, 
 .services, .testimonials-section, .contact-section {
     opacity: 1;
-    transition: all 0.8s ease-out;
 }
 
-.section-animate {
-    animation: sectionSlideIn 1s ease-out;
-}
 
-@keyframes sectionSlideIn {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+
+
 
 /* White to Pink Wave */
 .wave-white-to-pink {
@@ -2432,37 +2389,16 @@ textarea {
     
     .wave-divider svg {
         height: 100px;
-        /* Reduce shadow and animation intensity on mobile */
+        /* Reduce shadow intensity on mobile */
         filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08)) !important;
-        animation: waveFloatMobile 8s ease-in-out infinite;
     }
     
-    /* Reduce section animation on mobile for performance */
-    .section-animate {
-        animation: sectionSlideInMobile 0.6s ease-out;
-    }
+
 }
 
-/* Mobile-optimized animations */
-@keyframes waveFloatMobile {
-    0%, 100% {
-        transform: rotateY(180deg) translateY(0px);
-    }
-    50% {
-        transform: rotateY(180deg) translateY(-1px);
-    }
-}
 
-@keyframes sectionSlideInMobile {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+
+
 
 @media (max-width: 480px) {
     .wave-divider {
