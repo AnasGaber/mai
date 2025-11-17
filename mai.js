@@ -560,4 +560,82 @@ function forceTestimonialsAnimation() {
     });
 }
 
+// Wave Animation on Scroll - targeting SVG elements
+function initializeWaveAnimations() {
+    const waveSvgs = document.querySelectorAll('.wave-divider svg');
+    const sections = document.querySelectorAll('.hero, .welcome, .academic-section, .certifications-section, .services, .testimonials-section, .contact-section');
+    
+    // Create intersection observer for wave SVG animations
+    const waveObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-on-scroll');
+            }
+        });
+    }, {
+        threshold: 0.2,
+        rootMargin: '30px 0px'
+    });
+    
+    // Create intersection observer for section animations
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('section-animate');
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '50px 0px'
+    });
+    
+    // Observe all wave SVGs
+    waveSvgs.forEach(svg => {
+        waveObserver.observe(svg);
+    });
+    
+    // Observe all sections
+    sections.forEach(section => {
+        sectionObserver.observe(section);
+    });
+}
+
+// Enhanced scroll-based wave effects for SVG elements
+function addScrollWaveEffects() {
+    let ticking = false;
+    
+    function updateWaveAnimations() {
+        const scrolled = window.pageYOffset;
+        
+        document.querySelectorAll('.wave-divider svg').forEach((svg, index) => {
+            const speed = 0.08 + (index * 0.03); // Different speeds for different waves
+            const yPos = Math.sin(scrolled * speed * 0.01) * 2;
+            const xPos = Math.cos(scrolled * speed * 0.008) * 1;
+            
+            // Apply subtle parallax movement to SVG elements
+            const currentTransform = svg.style.transform || 'rotateY(180deg)';
+            if (!svg.classList.contains('animate-on-scroll')) {
+                svg.style.transform = `rotateY(180deg) translateY(${yPos}px) translateX(${xPos}px)`;
+            }
+        });
+        
+        ticking = false;
+    }
+    
+    window.addEventListener('scroll', () => {
+        if (!ticking && window.innerWidth > 768) { // Only on desktop for performance
+            requestAnimationFrame(updateWaveAnimations);
+            ticking = true;
+        }
+    });
+}
+
+// Initialize wave animations when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(() => {
+        initializeWaveAnimations();
+        addScrollWaveEffects();
+    }, 500); // Delay to ensure all elements are properly loaded
+});
+
 console.log('Feminine Purple theme loaded successfully! 💜');
