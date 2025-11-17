@@ -40,6 +40,8 @@ function switchLang(lang) {
         initializeObservers();
         // Reinitialize slider for language change
         setTimeout(reinitializeSlider, 100);
+        // Re-initialize smooth scrolling for English content
+        initializeSmoothScrolling();
     } else {
         arContent.classList.remove('hidden');
         enContent.classList.add('hidden');
@@ -67,7 +69,12 @@ function switchLang(lang) {
         initializeObservers();
         // Reinitialize slider for language change
         setTimeout(reinitializeSlider, 100);
+        // Re-initialize smooth scrolling for Arabic content
+        initializeSmoothScrolling();
     }
+    
+    // Force testimonials to use LTR animation for both languages
+    setTimeout(forceTestimonialsAnimation, 150);
     
     // Close mobile menu after language switch
     closeMobileMenu();
@@ -159,6 +166,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize observers after content is loaded
     setTimeout(() => {
         initializeObservers();
+        forceTestimonialsAnimation(); // Force testimonials to work on page load
     }, 100);
 });
 
@@ -185,19 +193,43 @@ function handleSubmit(event) {
     event.target.reset();
 }
 
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
+// Function to initialize smooth scrolling for navigation links
+function initializeSmoothScrolling() {
+    // Remove existing event listeners by replacing elements
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        const newAnchor = anchor.cloneNode(true);
+        anchor.parentNode.replaceChild(newAnchor, anchor);
     });
-});
+    
+    // Add new event listeners
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            let targetId = this.getAttribute('href');
+            
+            // Check if we're in English mode and the target doesn't already have -en suffix
+            const isEnglishActive = !document.getElementById('en-content').classList.contains('hidden');
+            if (isEnglishActive && !targetId.includes('-en')) {
+                // Add -en suffix for English sections
+                targetId = targetId + '-en';
+            } else if (!isEnglishActive && targetId.includes('-en')) {
+                // Remove -en suffix for Arabic sections
+                targetId = targetId.replace('-en', '');
+            }
+            
+            const target = document.querySelector(targetId);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+}
+
+// Initialize smooth scrolling on page load
+initializeSmoothScrolling();
 
 // Header scroll effect
 window.addEventListener('scroll', function() {
@@ -504,6 +536,28 @@ function reinitializeSlider() {
         showSlide(0);
         startAutoSlide();
     }
+}
+
+// Force testimonials animation to work in both languages
+function forceTestimonialsAnimation() {
+    const testimonialSliders = document.querySelectorAll('.testimonials-slider');
+    const testimonialTracks = document.querySelectorAll('.testimonials-track');
+    
+    // Force LTR direction on all testimonials elements
+    testimonialSliders.forEach(slider => {
+        slider.style.direction = 'ltr';
+        slider.style.setProperty('direction', 'ltr', 'important');
+    });
+    
+    testimonialTracks.forEach(track => {
+        track.style.direction = 'ltr';
+        track.style.setProperty('direction', 'ltr', 'important');
+        
+        // Restart animation by removing and re-adding animation
+        track.style.animation = 'none';
+        track.offsetHeight; // Trigger reflow
+        track.style.animation = 'scroll 90s linear infinite';
+    });
 }
 
 console.log('Feminine Purple theme loaded successfully! 💜');

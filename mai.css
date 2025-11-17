@@ -817,7 +817,6 @@ body.rtl {
     font-weight: 600;
     margin-bottom: 15px;
     color: white;
-    font-family: 'InkBrushArabic', 'Poppins', sans-serif;
     transition: all 0.3s ease;
 }
 
@@ -1955,6 +1954,7 @@ textarea {
 }
 
 .testimonials-section h2 {
+    font-family: 'InkBrushArabic', 'Poppins', sans-serif;
     text-align: center;
     font-size: 3rem;
     color: var(--text-dark);
@@ -2008,6 +2008,15 @@ textarea {
     100% {
         transform: translateX(-50%);
     }
+}
+
+/* Force LTR direction for testimonials slider and track to ensure consistent animation */
+.testimonials-slider {
+    direction: ltr !important;
+}
+
+.testimonials-track {
+    direction: ltr !important;
 }
 
 /* Pause animation on hover */
