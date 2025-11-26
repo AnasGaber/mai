@@ -2033,7 +2033,6 @@ textarea {
     background: white;
     border-radius: 20px;
     padding: 40px 30px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
     border: 2px solid var(--light-purple);
     position: relative;
     transition: all 0.3s ease;
@@ -2056,7 +2055,6 @@ textarea {
 
 .testimonial-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
     border-color: var(--secondary-purple);
 }
 
